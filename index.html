@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>JudgesPro Lite — Universal Judging &amp; Evaluation System</title>
+
+  <meta
+    name="description"
+    content="Official download page for JudgesPro Lite — a simple digital judging and evaluation system."
+  >
+
+  <meta name="theme-color" content="#1565c0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+      background: #f5f8fc;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* ================= HEADER ================= */
+
+    .topbar {
+      background: #ffffff;
+      border-bottom: 1px solid #e3eaf2;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .topbar-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1565c0, #42a5f5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 21px;
+      font-weight: 800;
+      box-shadow: 0 4px 12px rgba(21, 101, 192, 0.20);
+    }
+
+    .brand-text strong {
+      display: block;
+      color: #123b67;
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    .brand-text span {
+      display: block;
+      color: #607d9a;
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #455a70;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav a:hover {
+      color: #1565c0;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      background:
+        linear-gradient(
+          135deg,
+          #eaf4ff 0%,
+          #ffffff 55%,
+          #f1f7ff 100%
+        );
+      border-bottom: 1px solid #e1eaf3;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 78px 22px 72px;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #e3f2fd;
+      color: #1565c0;
+      border: 1px solid #bbdefb;
+      border-radius: 30px;
+      padding: 7px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #1976d2;
+    }
+
+    .hero h1 {
+      margin: 0;
+      color: #123b67;
+      font-size: clamp(38px, 6vw, 62px);
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+    }
+
+    .hero h1 span {
+      color: #1565c0;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      color: #455a70;
+      margin: 17px 0 15px;
+      font-weight: 500;
+    }
+
+    .hero-description {
+      max-width: 680px;
+      color: #607d95;
+      font-size: 16px;
+      margin-bottom: 28px;
+    }
+
+    /* ================= DOWNLOAD BUTTONS ================= */
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .download-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 52px;
+      padding: 0 25px;
+      border-radius: 10px;
+      background: #1565c0;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      box-shadow:
+        0 7px 18px rgba(21, 101, 192, 0.25);
+      transition: 0.2s ease;
+    }
+
+    .download-button:hover {
+      background: #0d47a1;
+      transform: translateY(-1px);
+      box-shadow:
+        0 9px 22px rgba(21, 101, 192, 0.30);
+    }
+
+    .secondary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 10px;
+      background: #ffffff;
+      border: 1px solid #c9d8e8;
+      color: #1565c0;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .secondary-button:hover {
+      background: #f3f8fd;
+    }
+
+    /* ================= DOWNLOAD CARD ================= */
+
+    .download-card {
+      background: #ffffff;
+      border: 1px solid #dce7f2;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow:
+        0 12px 35px rgba(38, 80, 120, 0.10);
+    }
+
+    .download-card-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: #e3f2fd;
+      color: #1565c0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 31px;
+      margin-bottom: 18px;
+    }
+
+    .download-card h2 {
+      color: #123b67;
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+
+    .download-card p {
+      color: #607d95;
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    .version-box {
+      margin: 22px 0 15px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #f5f9fd;
+      border: 1px solid #e1ebf4;
+    }
+
+    .version-box strong {
+      color: #123b67;
+      font-size: 17px;
+    }
+
+    .version-box small {
+      display: block;
+      color: #71869b;
+      margin-top: 3px;
+    }
+
+    .card-download {
+      width: 100%;
+    }
+
+    .download-count {
+      margin-top: 15px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: #f8fbfe;
+      border: 1px solid #e1eaf2;
+      text-align: center;
+      color: #58718a;
+      font-size: 14px;
+    }
+
+    .download-count-number {
+      color: #1565c0;
+      font-size: 22px;
+      font-weight: 800;
+      margin-right: 5px;
+    }
+
+    .download-count-label {
+      font-weight: 600;
+    }
+
+    .download-count-status {
+      display: block;
+      margin-top: 2px;
+      font-size: 11px;
+      color: #8a9bab;
+    }
+
+    /* ================= MAIN ================= */
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 65px 22px;
+    }
+
+    .section {
+      margin-bottom: 65px;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 35px;
+    }
+
+    .section-heading h2 {
+      color: #123b67;
+      font-size: 31px;
+      margin: 0 0 9px;
+    }
+
+    .section-heading p {
+      color: #6b8094;
+      margin: 0;
+    }
+
+    /* ================= FEATURES ================= */
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      background: #ffffff;
+      border: 1px solid #e0e9f2;
+      border-radius: 14px;
+      padding: 23px;
+      transition: 0.2s ease;
+    }
+
+    .feature:hover {
+      border-color: #b8d3ed;
+      box-shadow:
+        0 8px 22px rgba(40, 90, 135, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .feature-icon {
+      width: 43px;
+      height: 43px;
+      border-radius: 11px;
+      background: #eaf4ff;
+      color: #1565c0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 21px;
+      margin-bottom: 14px;
+    }
+
+    .feature h3 {
+      color: #234b70;
+      font-size: 17px;
+      margin: 0 0 6px;
+    }
+
+    .feature p {
+      color: #6a7e91;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    /* ================= FEATURE HIGHLIGHTS ================= */
+
+    .feature-highlights {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .feature-highlights p {
+      margin: 8px 0;
+      color: #455a70;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .feature-highlights p strong {
+      color: #1565c0;
+      font-weight: 700;
+    }
+
+    /* ================= INFORMATION ================= */
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .info-card {
+      background: #ffffff;
+      border: 1px solid #dfe8f1;
+      border-radius: 14px;
+      padding: 27px;
+    }
+
+    .info-card h3 {
+      color: #123b67;
+      margin: 0 0 13px;
+      font-size: 20px;
+    }
+
+    .info-card p {
+      color: #61778c;
+      font-size: 15px;
+      margin: 7px 0;
+    }
+
+    .steps {
+      margin: 0;
+      padding-left: 22px;
+      color: #61778c;
+    }
+
+    .steps li {
+      margin: 8px 0;
+    }
+
+    /* ================= TRUST ================= */
+
+    .trust-box {
+      background: #eef7ff;
+      border: 1px solid #cfe4f8;
+      border-radius: 15px;
+      padding: 27px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .trust-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+      color: #1565c0;
+    }
+
+    .trust-box h3 {
+      color: #123b67;
+      margin: 0 0 7px;
+    }
+
+    .trust-box p {
+      color: #58718a;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    /* ================= BOTTOM DOWNLOAD ================= */
+
+    .bottom-download {
+      text-align: center;
+      background:
+        linear-gradient(
+          135deg,
+          #eaf4ff,
+          #ffffff
+        );
+      border: 1px solid #d5e5f5;
+      border-radius: 18px;
+      padding: 42px 25px;
+    }
+
+    .bottom-download h2 {
+      color: #123b67;
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    .bottom-download p {
+      color: #61778c;
+      margin: 0 0 22px;
+      font-size: 15px;
+    }
+
+    /* ================= SUPPORT ================= */
+
+    .support {
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid #dfe8f1;
+      border-radius: 16px;
+      padding: 38px 25px;
+    }
+
+    .support h2 {
+      color: #123b67;
+      margin: 0 0 8px;
+    }
+
+    .support p {
+      color: #647a8e;
+      margin: 7px 0 18px;
+    }
+
+    .support a {
+      color: #1565c0;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .support-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #123b67;
+      color: #d8e7f5;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: #ffffff;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 850px) {
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding-top: 55px;
+      }
+
+      .download-card {
+        max-width: 600px;
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .topbar-inner {
+        padding: 11px 16px;
+      }
+
+      .brand-logo {
+        width: 40px;
+        height: 40px;
+      }
+
+      .brand-text strong {
+        font-size: 17px;
+      }
+
+      .brand-text span {
+        font-size: 10px;
+      }
+
+      .hero-inner {
+        padding: 45px 17px 50px;
+        gap: 35px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero-subtitle {
+        font-size: 18px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .download-button,
+      .secondary-button {
+        width: 100%;
+      }
+
+      .download-card {
+        padding: 23px;
+      }
+
+      main {
+        padding: 48px 17px;
+      }
+
+      .section {
+        margin-bottom: 50px;
+      }
+
+      .section-heading h2 {
+        font-size: 27px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-box {
+        padding: 21px;
+      }
+
+      .feature-highlights p {
+        font-size: 16px;
+      }
+
+      .bottom-download {
+        padding: 32px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="topbar">
+
+    <div class="topbar-inner">
+
+      <a class="brand" href="#">
+
+        <div class="brand-logo">
+          JP
+        </div>
+
+        <div class="brand-text">
+          <strong>JudgesPro Lite</strong>
+
+          <span>
+            Universal Judging &amp; Evaluation System
+          </span>
+        </div>
+
+      </a>
+
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#install">Installation</a>
+        <a href="#support">Support</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <div class="hero-inner">
+
+      <div>
+
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Official JudgesPro Lite Download
+        </div>
+
+        <h1>
+          <span>JudgesPro Lite</span>
+        </h1>
+
+        <div class="hero-subtitle">
+          Universal Judging &amp; Evaluation System
+        </div>
+
+        <p class="hero-description">
+          A simple digital judging and evaluation system for
+          competitions, exhibitions, performances, presentations
+          and other events. Set up festival and item details,
+          enter judgements, review saved records, prepare
+          tabulation and view results in one application.
+        </p>
+
+
+        <!-- DOWNLOAD BUTTON 1 -->
+
+        <div class="hero-buttons">
+
+          <a
+            class="download-button"
+            href="https://github.com/surendranaduthila-lab/JudgesPro-Download/releases/latest/download/JudgesPro.apk"
+          >
+            ↓&nbsp; Download JudgesPro-Lite
+          </a>
+
+          <a
+            class="secondary-button"
+            href="#features"
+          >
+            Explore Features
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================= DOWNLOAD CARD ================= -->
+
+      <div class="download-card">
+
+        <div class="download-card-icon">
+          ↓
+        </div>
+
+        <h2>
+          Get JudgesPro Lite
+        </h2>
+
+        <p>
+          Latest stable release
+        </p>
+
+        <div class="version-box">
+
+          <strong id="versionText">
+            JudgesPro Lite v1.0.0
+          </strong>
+
+          <small id="releaseText">
+            Release date: 20 September 2026
+          </small>
+
+          <small>
+            Android ARM64 · approximately 21 MB
+          </small>
+
+        </div>
+
+
+        <!-- DOWNLOAD BUTTON 2 -->
+
+        <a
+          id="downloadLink"
+          class="download-button card-download"
+          href="https://github.com/surendranaduthila-lab/JudgesPro-Download/releases/latest/download/JudgesPro.apk"
+        >
+          ↓&nbsp; Download JudgesPro-Lite
+        </a>
+
+
+        <!-- LIVE DOWNLOAD COUNTER -->
+
+        <div class="download-count">
+
+          <span
+            id="downloadCount"
+            class="download-count-number"
+          >
+            —
+          </span>
+
+          <span class="download-count-label">
+            Downloads
+          </span>
+
+          <span
+            id="downloadCountStatus"
+            class="download-count-status"
+          >
+            Loading latest download count…
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= MAIN ================= -->
+
+  <main>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section
+      class="section"
+      id="features"
+    >
+
+      <div class="section-heading">
+
+        <h2>
+          Simple Judging Workflow
+        </h2>
+
+        <p>
+          JudgesPro Lite keeps the essential judging tasks
+          together in a simple and practical Android application.
+        </p>
+
+      </div>
+
+
+      <div class="features">
+
+        <div class="feature">
+
+          <div class="feature-icon">
+            ⚙
+          </div>
+
+          <h3>
+            Festival Settings
+          </h3>
+
+          <p>
+            Save the festival name, venue, place and grade
+            criteria once and use them throughout the judging
+            records.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="feature-icon">
+            ▣
+          </div>
+
+          <h3>
+            Item Settings
+          </h3>
+
+          <p>
+            Create judging items with the item code, item name,
+            section, participant count and value points.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="feature-icon">
+            ★
+          </div>
+
+          <h3>
+            Judgement Entry
+          </h3>
+
+          <p>
+            Enter participant details and scores clearly while
+            recording remarks and supported media when permitted.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="feature-icon">
+            ✓
+          </div>
+
+          <h3>
+            Saved Judgement
+          </h3>
+
+          <p>
+            Review saved judgement records and check participant
+            scores before preparing the tabulation.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="feature-icon">
+            Σ
+          </div>
+
+          <h3>
+            Tabulation
+          </h3>
+
+          <p>
+            Use the saved scores to prepare tabulation records
+            and check totals and grades in an organized view.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="feature-icon">
+            PDF
+          </div>
+
+          <h3>
+            Results &amp; PDF
+          </h3>
+
+          <p>
+            View results and prepare judgement and tabulation
+            sheets as PDF records for saving, sharing or printing.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- TEXT HIGHLIGHTS — NOT BUTTONS -->
+
+      <div class="feature-highlights">
+
+        <p>
+          <strong>Less Paperwork.</strong>
+          More Judging.
+        </p>
+
+        <p>
+          <strong>Keep Every Entry</strong>
+          in One Place.
+        </p>
+
+        <p>
+          <strong>Calculate Scores</strong>
+          with Ease.
+        </p>
+
+        <p>
+          <strong>Grade Quickly</strong>
+          and Clearly.
+        </p>
+
+        <p>
+          <strong>Add Photo &amp; Video Evidence</strong>
+          when permitted.
+        </p>
+
+        <p>
+          <strong>Judge Any Item</strong>
+          at Any Festival.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= LITE INFORMATION ================= -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <h2>
+          JudgesPro Lite
+        </h2>
+
+        <p>
+          Designed for straightforward judging without
+          unnecessary setup steps.
+        </p>
+
+      </div>
+
+
+      <div class="info-grid">
+
+        <div class="info-card">
+
+          <h3>
+            No Login Required
+          </h3>
+
+          <p>
+            JudgesPro Lite does not require an Admin login
+            or Judge login. Open the application and start
+            using the judging workflow directly.
+          </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+          <h3>
+            No Import or Export
+          </h3>
+
+          <p>
+            The Lite version does not provide import or export
+            facilities. Judging information is entered and
+            managed directly within the application.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= INSTALLATION ================= -->
+
+    <section
+      class="section"
+      id="install"
+    >
+
+      <div class="section-heading">
+
+        <h2>
+          How to Install
+        </h2>
+
+        <p>
+          JudgesPro Lite is distributed as a direct Android
+          application download.
+        </p>
+
+      </div>
+
+
+      <div class="info-grid">
+
+        <div class="info-card">
+
+          <h3>
+            📥 Install the App
+          </h3>
+
+          <ol class="steps">
+
+            <li>
+              Tap the
+              <strong>
+                Download JudgesPro-Lite
+              </strong>
+              button.
+            </li>
+
+            <li>
+              Open the downloaded file on your Android device.
+            </li>
+
+            <li>
+              If Android asks for permission to install an app
+              from this source, allow the permission for your
+              browser or file manager.
+            </li>
+
+            <li>
+              Install JudgesPro Lite.
+            </li>
+
+            <li>
+              Open the application and tap
+              <strong>
+                START
+              </strong>
+              to begin.
+            </li>
+
+          </ol>
+
+        </div>
+
+
+        <div class="info-card">
+
+          <h3>
+            🔄 Updating JudgesPro Lite
+          </h3>
+
+          <p>
+            When a new version is released, return to this page
+            and download the latest version.
+          </p>
+
+          <p>
+            The download buttons on this page point to the
+            latest JudgesPro Lite release.
+          </p>
+
+          <p>
+            Install the new version over the existing installation
+            when Android allows the update.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= IMPORTANT INFORMATION ================= -->
+
+    <section class="section">
+
+      <div class="trust-box">
+
+        <div class="trust-icon">
+          ✓
+        </div>
+
+        <div>
+
+          <h3>
+            Important Information
+          </h3>
+
+          <p>
+            JudgesPro Lite is intended for direct, simple
+            judging and evaluation. The Lite version does not
+            require login and does not provide import or export
+            facilities. Judgement records, tabulation and
+            results are managed within the application.
+          </p>
+
+          <p style="margin-top:10px;">
+            Photo or short video may be added to a judgement
+            only when the rules of the festival or event permit
+            photography or videography. Such media can be useful
+            as supporting evidence and for later review.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= JUDGING RECORDS ================= -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <h2>
+          Judging Records
+        </h2>
+
+        <p>
+          JudgesPro Lite keeps the judging workflow organized
+          so that scores, remarks and results can be reviewed
+          during the evaluation process.
+        </p>
+
+      </div>
+
+
+      <div class="info-card">
+
+        <h3>
+          📋 What You Can Manage
+        </h3>
+
+        <p>
+          <strong>Festival details</strong> can be entered once
+          and reused for the related judging records.
+        </p>
+
+        <p>
+          <strong>Item details</strong> include the item code,
+          item name, section, participant count and value points.
+        </p>
+
+        <p>
+          <strong>Judgement records</strong> contain participant
+          details, scores, remarks and permitted supporting media.
+        </p>
+
+        <p>
+          <strong>Tabulation and results</strong> help you check
+          totals, grades and final evaluation information.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= DOWNLOAD BUTTON 3 ================= -->
+
+    <section class="section">
+
+      <div class="bottom-download">
+
+        <h2>
+          Ready to Start Judging?
+        </h2>
+
+        <p>
+          Download JudgesPro Lite and keep your judging
+          records organized in one place.
+        </p>
+
+        <a
+          class="download-button"
+          href="https://github.com/surendranaduthila-lab/JudgesPro-Download/releases/latest/download/JudgesPro.apk"
+        >
+          ↓&nbsp; Download JudgesPro-Lite
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SUPPORT ================= -->
+
+    <section
+      class="section"
+      id="support"
+    >
+
+      <div class="support">
+
+        <h2>
+          Need Help?
+        </h2>
+
+        <p>
+          For JudgesPro Lite support, suggestions or user
+          assistance, contact the developer.
+        </p>
+
+        <p>
+          <a href="mailto:surendranaduthila@gmail.com">
+            surendranaduthila@gmail.com
+          </a>
+        </p>
+
+        <div class="support-buttons">
+
+          <a
+            class="secondary-button"
+            href="https://chat.whatsapp.com/EblHyPwSHsxCNCa43iqERs?s=sh&p=a&mlu=4&ilr=4"
+          >
+            Join JudgesPro Users WhatsApp Group
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <p>
+      <strong>JudgesPro Lite</strong> —
+      Universal Judging &amp; Evaluation System
+    </p>
+
+    <p>
+      Official download page
+    </p>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    /*
+     * ============================================================
+     * JudgesPro Version Information
+     * ============================================================
+     */
+
+    fetch("version.json")
+
+      .then(function(response) {
+
+        if (!response.ok) {
+          throw new Error(
+            "Version information unavailable"
+          );
+        }
+
+        return response.json();
+
+      })
+
+      .then(function(data) {
+
+        if (data.version) {
+
+          document.getElementById(
+            "versionText"
+          ).textContent =
+            "JudgesPro Lite v" + data.version;
+
+        }
+
+
+        if (data.releaseDate) {
+
+          var date =
+            new Date(
+              data.releaseDate + "T00:00:00"
+            );
+
+          if (!isNaN(date.getTime())) {
+
+            var formattedDate =
+              date.toLocaleDateString(
+                "en-IN",
+                {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric"
+                }
+              );
+
+            document.getElementById(
+              "releaseText"
+            ).textContent =
+              "Release date: " + formattedDate;
+
+          }
+
+        }
+
+
+        if (data.downloadUrl) {
+
+          /*
+           * Keep all three download buttons linked
+           * to the latest download URL when version.json
+           * provides one.
+           */
+
+          var downloadButtons =
+            document.querySelectorAll(
+              ".download-button"
+            );
+
+          for (
+            var i = 0;
+            i < downloadButtons.length;
+            i++
+          ) {
+
+            if (
+              downloadButtons[i].id !==
+              "downloadLink"
+            ) {
+
+              downloadButtons[i].href =
+                data.downloadUrl;
+
+            }
+
+          }
+
+          document.getElementById(
+            "downloadLink"
+          ).href =
+            data.downloadUrl;
+
+        }
+
+      })
+
+      .catch(function() {
+
+        console.log(
+          "Using default JudgesPro release information."
+        );
+
+      });
+
+
+    /*
+     * ============================================================
+     * LIVE GITHUB DOWNLOAD COUNTER
+     * ============================================================
+     */
+
+    var githubApi =
+      "https://api.github.com/repos/" +
+      "surendranaduthila-lab/" +
+      "JudgesPro-Download/releases/latest";
+
+
+    fetch(githubApi, {
+      cache: "no-store"
+    })
+
+      .then(function(response) {
+
+        if (!response.ok) {
+          throw new Error(
+            "GitHub download information unavailable"
+          );
+        }
+
+        return response.json();
+
+      })
+
+      .then(function(release) {
+
+        var assets =
+          release.assets || [];
+
+        var apkAsset = null;
+
+
+        for (
+          var i = 0;
+          i < assets.length;
+          i++
+        ) {
+
+          if (
+            assets[i].name ===
+            "JudgesPro.apk"
+          ) {
+
+            apkAsset = assets[i];
+
+            break;
+
+          }
+
+        }
+
+
+        if (apkAsset) {
+
+          var count =
+            Number(
+              apkAsset.download_count
+            );
+
+
+          document.getElementById(
+            "downloadCount"
+          ).textContent =
+            isNaN(count)
+              ? "0"
+              : count.toLocaleString("en-IN");
+
+
+          document.getElementById(
+            "downloadCountStatus"
+          ).textContent =
+            "Downloads of the latest release";
+
+        } else {
+
+          document.getElementById(
+            "downloadCount"
+          ).textContent =
+            "0";
+
+          document.getElementById(
+            "downloadCountStatus"
+          ).textContent =
+            "Latest release information";
+
+        }
+
+      })
+
+      .catch(function(error) {
+
+        console.log(
+          "Download counter unavailable:",
+          error
+        );
+
+
+        document.getElementById(
+          "downloadCount"
+        ).textContent =
+          "—";
+
+
+        document.getElementById(
+          "downloadCountStatus"
+        ).textContent =
+          "Download count temporarily unavailable";
+
+      });
+
+  </script>
+
+</body>
+</html>
