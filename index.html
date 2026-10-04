@@ -740,7 +740,8 @@
 
           <a
             class="download-button"
-            href="https://github.com/surendranaduthila-lab/JudgesPro-Download/releases/latest/download/JudgesPro.apk"
+            href="https://raw.githubusercontent.com/surendranaduthila-lab/JudgesPro-Lite/main/JudgesPro_Lite.apk"
+            download
           >
             ↓&nbsp; Download JudgesPro-Lite
           </a>
@@ -795,35 +796,36 @@
         <a
           id="downloadLink"
           class="download-button card-download"
-          href="https://github.com/surendranaduthila-lab/JudgesPro-Download/releases/latest/download/JudgesPro.apk"
+          href="https://raw.githubusercontent.com/surendranaduthila-lab/JudgesPro-Lite/main/JudgesPro_Lite.apk"
+            download
         >
           ↓&nbsp; Download JudgesPro-Lite
         </a>
 
 
-        <!-- LIVE DOWNLOAD COUNTER -->
+        <!-- OFFICIAL APK DOWNLOAD STATUS -->
 
         <div class="download-count">
 
           <span
-            id="downloadCount"
             class="download-count-number"
           >
-            —
+            Official APK
           </span>
 
           <span class="download-count-label">
-            Downloads
+            JudgesPro Lite
           </span>
 
           <span
-            id="downloadCountStatus"
             class="download-count-status"
           >
-            Loading latest download count…
+            Direct download from the official GitHub repository
           </span>
 
         </div>
+
+      </div>
 
       </div>
 
@@ -1263,7 +1265,8 @@
 
         <a
           class="download-button"
-          href="https://github.com/surendranaduthila-lab/JudgesPro-Download/releases/latest/download/JudgesPro.apk"
+          href="https://raw.githubusercontent.com/surendranaduthila-lab/JudgesPro-Lite/main/JudgesPro_Lite.apk"
+            download
         >
           ↓&nbsp; Download JudgesPro-Lite
         </a>
@@ -1336,228 +1339,10 @@
   <script>
 
     /*
-     * ============================================================
-     * JudgesPro Version Information
-     * ============================================================
+     * JudgesPro Lite download page.
+     * The APK is stored directly in the JudgesPro-Lite
+     * GitHub repository, so no GitHub Release API is used.
      */
-
-    fetch("version.json")
-
-      .then(function(response) {
-
-        if (!response.ok) {
-          throw new Error(
-            "Version information unavailable"
-          );
-        }
-
-        return response.json();
-
-      })
-
-      .then(function(data) {
-
-        if (data.version) {
-
-          document.getElementById(
-            "versionText"
-          ).textContent =
-            "JudgesPro Lite v" + data.version;
-
-        }
-
-
-        if (data.releaseDate) {
-
-          var date =
-            new Date(
-              data.releaseDate + "T00:00:00"
-            );
-
-          if (!isNaN(date.getTime())) {
-
-            var formattedDate =
-              date.toLocaleDateString(
-                "en-IN",
-                {
-                  day: "numeric",
-                  month: "long",
-                  year: "numeric"
-                }
-              );
-
-            document.getElementById(
-              "releaseText"
-            ).textContent =
-              "Release date: " + formattedDate;
-
-          }
-
-        }
-
-
-        if (data.downloadUrl) {
-
-          /*
-           * Keep all three download buttons linked
-           * to the latest download URL when version.json
-           * provides one.
-           */
-
-          var downloadButtons =
-            document.querySelectorAll(
-              ".download-button"
-            );
-
-          for (
-            var i = 0;
-            i < downloadButtons.length;
-            i++
-          ) {
-
-            if (
-              downloadButtons[i].id !==
-              "downloadLink"
-            ) {
-
-              downloadButtons[i].href =
-                data.downloadUrl;
-
-            }
-
-          }
-
-          document.getElementById(
-            "downloadLink"
-          ).href =
-            data.downloadUrl;
-
-        }
-
-      })
-
-      .catch(function() {
-
-        console.log(
-          "Using default JudgesPro release information."
-        );
-
-      });
-
-
-    /*
-     * ============================================================
-     * LIVE GITHUB DOWNLOAD COUNTER
-     * ============================================================
-     */
-
-    var githubApi =
-      "https://api.github.com/repos/" +
-      "surendranaduthila-lab/" +
-      "JudgesPro-Download/releases/latest";
-
-
-    fetch(githubApi, {
-      cache: "no-store"
-    })
-
-      .then(function(response) {
-
-        if (!response.ok) {
-          throw new Error(
-            "GitHub download information unavailable"
-          );
-        }
-
-        return response.json();
-
-      })
-
-      .then(function(release) {
-
-        var assets =
-          release.assets || [];
-
-        var apkAsset = null;
-
-
-        for (
-          var i = 0;
-          i < assets.length;
-          i++
-        ) {
-
-          if (
-            assets[i].name ===
-            "JudgesPro.apk"
-          ) {
-
-            apkAsset = assets[i];
-
-            break;
-
-          }
-
-        }
-
-
-        if (apkAsset) {
-
-          var count =
-            Number(
-              apkAsset.download_count
-            );
-
-
-          document.getElementById(
-            "downloadCount"
-          ).textContent =
-            isNaN(count)
-              ? "0"
-              : count.toLocaleString("en-IN");
-
-
-          document.getElementById(
-            "downloadCountStatus"
-          ).textContent =
-            "Downloads of the latest release";
-
-        } else {
-
-          document.getElementById(
-            "downloadCount"
-          ).textContent =
-            "0";
-
-          document.getElementById(
-            "downloadCountStatus"
-          ).textContent =
-            "Latest release information";
-
-        }
-
-      })
-
-      .catch(function(error) {
-
-        console.log(
-          "Download counter unavailable:",
-          error
-        );
-
-
-        document.getElementById(
-          "downloadCount"
-        ).textContent =
-          "—";
-
-
-        document.getElementById(
-          "downloadCountStatus"
-        ).textContent =
-          "Download count temporarily unavailable";
-
-      });
 
   </script>
 
