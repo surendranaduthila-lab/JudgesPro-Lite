@@ -4,279 +4,302 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JudgesPro — Universal Judging & Evaluation System</title>
+<title>JudgesPro — Universal Judging &amp; Evaluation System</title>
 
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    color:#263238;
-    background:#f5f8fc;
-    line-height:1.45
+margin:0;
+font-family:Arial,sans-serif;
+color:#263238;
+background:#f5f8fc;
+line-height:1.45
 }
 a{text-decoration:none}
 .wrap{width:92%;max-width:900px;margin:auto}
 
-/* HEADER */
 header{
-    background:#1565c0;
-    color:#fff;
-    padding:12px 0
+background:#1565c0;
+color:#fff;
+padding:12px 0
 }
 .nav{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:9px
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:9px
 }
 .logo{
-    color:#fff;
-    text-align:center;
-    font-weight:bold;
-    font-size:22px
+color:#fff;
+text-align:center;
+font-weight:bold;
+font-size:22px
 }
 .logo small{
-    display:block;
-    font-size:8px;
-    letter-spacing:1px;
-    margin-top:3px
+display:block;
+font-size:8px;
+letter-spacing:1px;
+margin-top:3px
 }
 .links{
-    display:flex;
-    justify-content:center;
-    gap:4px;
-    width:100%
+display:flex;
+justify-content:center;
+gap:4px;
+width:100%
 }
 .links a{
-    color:#fff;
-    font-size:12px;
-    padding:6px 9px
+color:#fff;
+font-size:12px;
+padding:6px 9px
 }
 
-/* HERO */
 .hero{
-    background:linear-gradient(135deg,#1565c0,#1976d2);
-    color:#fff;
-    text-align:center;
-    padding:38px 15px
+background:linear-gradient(135deg,#1565c0,#1976d2);
+color:#fff;
+text-align:center;
+padding:38px 15px
 }
-.hero h1{font-size:30px;margin:0 0 7px}
-.hero h2{font-size:21px;margin:0 0 12px}
+.hero h1{
+font-size:30px;
+margin:0 0 7px
+}
+.hero h2{
+font-size:21px;
+margin:0 0 12px
+}
 .hero p{
-    font-size:14px;
-    max-width:600px;
-    margin:0 auto 18px
+font-size:14px;
+max-width:600px;
+margin:0 auto 18px
 }
 
-/* BUTTONS */
 .btn{
-    display:inline-block;
-    padding:11px 20px;
-    border-radius:7px;
-    font-weight:bold;
-    font-size:14px
+display:inline-block;
+padding:11px 20px;
+border-radius:7px;
+font-weight:bold;
+font-size:14px
 }
 .download{
-    background:#fff;
-    color:#1565c0
+background:#fff;
+color:#1565c0
 }
 .more{
-    color:#fff;
-    border:1px solid #fff;
-    margin-left:5px
+color:#fff;
+border:1px solid #fff;
+margin-left:5px
 }
 
-/* SECTIONS */
 section{padding:28px 0}
+
 h2.title{
-    text-align:center;
-    color:#1565c0;
-    font-size:23px;
-    margin:0 0 6px
-}
-.intro{
-    text-align:center;
-    color:#607d8b;
-    font-size:14px;
-    margin:0 auto 17px
+text-align:center;
+color:#1565c0;
+font-size:23px;
+margin:0 0 6px
 }
 
-/* DOWNLOAD */
+.intro{
+text-align:center;
+color:#607d8b;
+font-size:14px;
+margin:0 auto 17px
+}
+
 .card{
-    background:#fff;
-    padding:20px 15px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 2px 9px #0001
+background:#fff;
+padding:20px 15px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 2px 9px #0001
 }
+
 .card h3{
-    color:#1565c0;
-    font-size:22px;
-    margin:0
+color:#1565c0;
+font-size:22px;
+margin:0
 }
+
 .version{
-    color:#607d8b;
-    font-weight:bold;
-    font-size:14px;
-    margin:2px 0 8px
+color:#607d8b;
+font-weight:bold;
+font-size:14px;
+margin:2px 0 8px
 }
+
 .info{
-    color:#607d8b;
-    font-size:13px;
-    margin-bottom:15px
+color:#607d8b;
+font-size:13px;
+margin-bottom:15px
 }
+
 .blue{
-    background:#1565c0;
-    color:#fff
+background:#1565c0;
+color:#fff
 }
+
 .count{
-    margin-top:11px;
-    color:#78909c;
-    font-size:12px
+margin-top:11px;
+color:#78909c;
+font-size:12px
 }
+
 .count strong{color:#1565c0}
 
-/* FEATURES */
 .grid{
-    display:grid;
-    gap:9px
+display:grid;
+gap:9px
 }
+
 .item{
-    background:#fff;
-    padding:14px;
-    border-radius:8px;
-    box-shadow:0 1px 6px #0001
+background:#fff;
+padding:14px;
+border-radius:8px;
+box-shadow:0 1px 6px #0001
 }
-.item b{
-    color:#1565c0;
-    font-size:16px
+
+.item h3{
+color:#1565c0;
+font-size:16px;
+margin:0 0 3px
 }
+
 .item p{
-    color:#607d8b;
-    font-size:13px;
-    margin:3px 0 0
+color:#607d8b;
+font-size:13px;
+margin:0
 }
 
-/* HIGHLIGHTS */
 .highlights{
-    display:grid;
-    gap:6px
+display:grid;
+gap:6px
 }
+
 .highlight{
-    background:#fff;
-    border-left:4px solid #1565c0;
-    padding:8px 11px;
-    font-size:13px;
-    font-weight:bold;
-    border-radius:4px
+background:#fff;
+border-left:4px solid #1565c0;
+padding:8px 11px;
+font-size:13px;
+font-weight:bold;
+border-radius:4px
 }
 
-/* INFO */
 .info-grid{
-    display:grid;
-    gap:9px
+display:grid;
+gap:9px
 }
 
-/* INSTALL */
 .steps{
-    display:grid;
-    gap:7px
+display:grid;
+gap:7px
 }
+
 .step{
-    background:#fff;
-    padding:11px;
-    border-radius:7px;
-    display:flex;
-    gap:10px
+background:#fff;
+padding:11px;
+border-radius:7px;
+display:flex;
+gap:10px
 }
+
 .num{
-    min-width:28px;
-    height:28px;
-    background:#1565c0;
-    color:#fff;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    font-size:13px
+min-width:28px;
+height:28px;
+background:#1565c0;
+color:#fff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+font-size:13px
 }
+
 .step b{font-size:14px}
+
 .step p{
-    color:#607d8b;
-    font-size:12.5px;
-    margin:2px 0 0
+color:#607d8b;
+font-size:12.5px;
+margin:2px 0 0
 }
+
 .note{
-    margin-top:9px;
-    padding:10px;
-    background:#fff8e1;
-    border-left:4px solid #ffb300;
-    font-size:12.5px
+margin-top:9px;
+padding:10px;
+background:#fff8e1;
+border-left:4px solid #ffb300;
+font-size:12.5px
 }
 
-/* READY */
 .ready{
-    background:#e3f2fd;
-    text-align:center;
-    padding:30px 15px
+background:#e3f2fd;
+text-align:center;
+padding:30px 15px
 }
+
 .ready h2{
-    color:#1565c0;
-    margin:0 0 5px
+color:#1565c0;
+margin:0 0 5px
 }
+
 .ready p{
-    color:#607d8b;
-    font-size:13px;
-    margin:0 0 14px
+color:#607d8b;
+font-size:13px;
+margin:0 0 14px
 }
 
-/* SUPPORT */
 .support{
-    text-align:center;
-    background:#fff;
-    padding:20px 12px;
-    border-radius:9px
+text-align:center;
+background:#fff;
+padding:20px 12px;
+border-radius:9px
 }
+
 .support p{
-    font-size:13px;
-    margin:7px 0
+font-size:13px;
+margin:7px 0
 }
-.support a{color:#1565c0;font-weight:bold}
+
+.support a{
+color:#1565c0;
+font-weight:bold
+}
+
 .whatsapp{
-    display:inline-block;
-    margin-top:8px;
-    background:#1565c0;
-    color:#fff!important;
-    padding:10px 16px;
-    border-radius:7px;
-    font-size:13px
+display:inline-block;
+margin-top:8px;
+background:#1565c0;
+color:#fff!important;
+padding:10px 16px;
+border-radius:7px;
+font-size:13px
 }
 
-/* FOOTER */
 footer{
-    background:#263238;
-    color:#cfd8dc;
-    text-align:center;
-    padding:16px 10px;
-    font-size:12px
+background:#263238;
+color:#cfd8dc;
+text-align:center;
+padding:16px 10px;
+font-size:12px
 }
 
-/* LARGER SCREENS */
 @media(min-width:650px){
-    .nav{
-        flex-direction:row;
-        justify-content:space-between
-    }
-    .logo{text-align:left}
-    .links{width:auto}
-    .hero{padding:55px 20px}
-    .hero h1{font-size:42px}
-    .grid{grid-template-columns:repeat(3,1fr)}
-    .info-grid{grid-template-columns:repeat(2,1fr)}
-    section{padding:38px 0}
+.nav{
+flex-direction:row;
+justify-content:space-between
+}
+.logo{text-align:left}
+.links{width:auto}
+.hero{padding:55px 20px}
+.hero h1{font-size:42px}
+.grid{
+grid-template-columns:repeat(3,1fr)
+}
+.info-grid{
+grid-template-columns:repeat(2,1fr)
+}
+section{padding:38px 0}
 }
 </style>
 
@@ -333,6 +356,7 @@ Download the latest Android version from the official release.
 <div class="card">
 
 <h3>JudgesPro</h3>
+
 <div class="version">v1.0</div>
 
 <div class="info">
@@ -349,6 +373,7 @@ APK Downloads: <strong id="downloads">—</strong>
 </div>
 
 </div>
+
 </div>
 </section>
 
@@ -356,41 +381,57 @@ APK Downloads: <strong id="downloads">—</strong>
 <div class="wrap">
 
 <h2 class="title">Features</h2>
-<p class="intro">Everything needed for simple and organized judging.</p>
+
+<p class="intro">
+Everything needed for simple and organized judging.
+</p>
 
 <div class="grid">
 
 <div class="item">
-<b>Festival Settings</b>
-<p>Set festival name, venue, place and grading criteria.</p>
+<h3>Festival Settings</h3>
+<p>
+Set the festival name, venue, place and grading criteria.
+</p>
 </div>
 
 <div class="item">
-<b>Item Settings</b>
-<p>Configure item code, name, section, participants and value points.</p>
+<h3>Item Settings</h3>
+<p>
+Configure item code, name, section, participants and value points.
+</p>
 </div>
 
 <div class="item">
-<b>Judgement Entry</b>
-<p>Enter participant scores and remarks quickly.</p>
+<h3>Judgement Entry</h3>
+<p>
+Enter participant scores and remarks quickly.
+</p>
 </div>
 
 <div class="item">
-<b>Saved Judgement</b>
-<p>Keep entered judgements available for checking.</p>
+<h3>Saved Judgement</h3>
+<p>
+Keep entered judgements available for checking.
+</p>
 </div>
 
 <div class="item">
-<b>Tabulation</b>
-<p>View scores, totals and grades clearly.</p>
+<h3>Tabulation</h3>
+<p>
+View scores, totals and grades clearly.
+</p>
 </div>
 
 <div class="item">
-<b>Results &amp; PDF</b>
-<p>Prepare results and PDF records for saving, sharing or printing.</p>
+<h3>Results &amp; PDF</h3>
+<p>
+Prepare results and PDF records for saving, sharing or printing.
+</p>
 </div>
 
 </div>
+
 </div>
 </section>
 
@@ -400,12 +441,14 @@ APK Downloads: <strong id="downloads">—</strong>
 <h2 class="title">Why JudgesPro?</h2>
 
 <div class="highlights">
+
 <div class="highlight">Less Paperwork. More Judging.</div>
 <div class="highlight">Keep Every Entry in One Place.</div>
 <div class="highlight">Calculate Scores with Ease.</div>
 <div class="highlight">Grade Quickly and Clearly.</div>
 <div class="highlight">Add Photo &amp; Video Evidence.</div>
 <div class="highlight">Judge Any Item at Any Festival.</div>
+
 </div>
 
 </div>
@@ -415,21 +458,29 @@ APK Downloads: <strong id="downloads">—</strong>
 <div class="wrap">
 
 <h2 class="title">Simple by Design</h2>
-<p class="intro">Designed for quick and straightforward use.</p>
+
+<p class="intro">
+Designed for quick and straightforward use.
+</p>
 
 <div class="info-grid">
 
 <div class="item">
-<b>No Login Required</b>
-<p>Start using JudgesPro without creating an account.</p>
+<h3>No Login Required</h3>
+<p>
+Start using JudgesPro without creating an account.
+</p>
 </div>
 
 <div class="item">
-<b>No Import or Export</b>
-<p>The Lite version keeps the judging workflow simple and self-contained.</p>
+<h3>No Import or Export</h3>
+<p>
+The Lite version keeps the judging workflow simple and self-contained.
+</p>
 </div>
 
 </div>
+
 </div>
 </section>
 
@@ -437,7 +488,10 @@ APK Downloads: <strong id="downloads">—</strong>
 <div class="wrap">
 
 <h2 class="title">Installation</h2>
-<p class="intro">Install JudgesPro in a few simple steps.</p>
+
+<p class="intro">
+Install JudgesPro in a few simple steps.
+</p>
 
 <div class="steps">
 
@@ -445,7 +499,9 @@ APK Downloads: <strong id="downloads">—</strong>
 <div class="num">1</div>
 <div>
 <b>Download the APK</b>
-<p>Tap any Download JudgesPro button on this page.</p>
+<p>
+Tap any Download JudgesPro button on this page.
+</p>
 </div>
 </div>
 
@@ -453,7 +509,9 @@ APK Downloads: <strong id="downloads">—</strong>
 <div class="num">2</div>
 <div>
 <b>Open the downloaded file</b>
-<p>Open JudgesPro.apk from your Downloads folder or notification panel.</p>
+<p>
+Open JudgesPro.apk from your Downloads folder or notification panel.
+</p>
 </div>
 </div>
 
@@ -461,7 +519,9 @@ APK Downloads: <strong id="downloads">—</strong>
 <div class="num">3</div>
 <div>
 <b>Allow installation if requested</b>
-<p>Allow installation from this source if Android asks.</p>
+<p>
+Allow installation from this source if Android asks.
+</p>
 </div>
 </div>
 
@@ -469,14 +529,17 @@ APK Downloads: <strong id="downloads">—</strong>
 <div class="num">4</div>
 <div>
 <b>Open JudgesPro</b>
-<p>Start setting up your festival and judging items.</p>
+<p>
+Start setting up your festival and judging items.
+</p>
 </div>
 </div>
 
 </div>
 
 <div class="note">
-<strong>Important:</strong> Download JudgesPro only from this official page
+<strong>Important:</strong>
+Download JudgesPro only from this official page
 or the official JudgesPro GitHub release.
 </div>
 
@@ -488,7 +551,9 @@ or the official JudgesPro GitHub release.
 
 <h2>Ready to Judge?</h2>
 
-<p>Keep your judging work simple and organized.</p>
+<p>
+Keep your judging work simple and organized.
+</p>
 
 <a class="btn blue"
 href="https://github.com/surendranaduthila-lab/JudgesPro-Lite/releases/download/v1.0.0/JudgesPro.apk">
@@ -529,10 +594,11 @@ Join JudgesPro WhatsApp Group </a>
 fetch("https://api.github.com/repos/surendranaduthila-lab/JudgesPro-Lite/releases/latest")
 .then(r=>r.json())
 .then(r=>{
-    const a=r.assets.find(x=>x.name==="JudgesPro.apk");
-    if(a)
-        document.getElementById("downloads").textContent=
-        Number(a.download_count).toLocaleString();
+const a=r.assets.find(x=>x.name==="JudgesPro.apk");
+if(a){
+document.getElementById("downloads").textContent=
+Number(a.download_count).toLocaleString();
+}
 })
 .catch(()=>{});
 </script>
